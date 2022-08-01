@@ -1,0 +1,40 @@
+<div class="container">
+   <header class="mx-3">Welcome Nick <span class="mx-5"> Manager Screen</span> </header>
+   
+<hr style="border:   black">
+   
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Employee Id</th>
+            <th>Employee Name</th>
+            <th>Project Name</th>
+            <th>Rating</th>
+            <th>Comments</th>
+            <th>MgrRatings</th>
+            <th>MgrComments</th>
+            <th>Action</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        
+        </tr>
+        </tbody>
+        <tr *ngFor="let dt of user">
+            <td>{{dt.EmpId}}</td>
+            <td>{{dt.EmpName}}</td>
+            <td>{{dt.ProjectName}}</td>
+            <td>{{dt.Rating}}</td>
+            <td>{{dt.Comments}}</td>
+            <td>{{dt.mgrRating}}</td>
+            <td>{{dt.mgrComments}}</td>
+            <td>{{dt.Action}}</td>
+           <!-- k<td><button class="btn btn-success" (click)="delete_btn_fun(dt.id)">Delete</button></td> -->
+          
+        </tr> -->
+    </table>
+</div>
+
+

@@ -1,0 +1,36 @@
+<section >
+    <div class="container" id="wrapper">
+        <h1 style="font-size: 50px; color: green; text-align: center;" font>WELCOME</h1>
+        <form [formGroup]="myForm" class="justify-content-center" (ngSubmit)="onSubmitForm()">
+
+            
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" class="form-control" name="username" formControlName="username" required
+                    [ngClass]="{'is-invalid':isSubmitted && f.username.errors}" placeholder="Username is required">
+                <div *ngIf="isSubmitted && f.username.errors?.required" class="invalid-feedback"><span
+                        style="color: red;"> Username Is Required*</span></div>
+                <div *ngIf="isSubmitted && f.username.errors?.minlength" class="invalid-feedback"><span
+                    style="color: red;"> Username at least 6 character.</span></div>
+                </div>
+            <br />
+            <br />
+
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" name="password" formControlName="password" required
+                    [ngClass]="{'is-invalid':isSubmitted && f.password.errors}" placeholder="Password is required">
+                <div *ngIf="isSubmitted && f.password.errors?.required" class="invalid-feedback"><span
+                        style="color: red;"> Password Is Required*</span></div>
+                <div *ngIf="isSubmitted && f.password.errors?.minlength" class="invalid-feedback"><span
+                    style="color: red;"> Password at least 8character.</span></div>
+                </div>
+
+               
+            <div class="form-group mb-4">
+                <input type="submit" value="login" class="btn btn-info mt-3">
+            
+        </div> 
+        </form>
+    </div>
+</section>

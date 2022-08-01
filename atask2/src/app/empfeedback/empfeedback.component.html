@@ -1,0 +1,77 @@
+
+
+
+
+
+<section mt-4>
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            <div class="col-md-8">
+        <h2>Employee Feedback Form</h2>
+        <div class="form-wrap mt-3"></div>
+        <form [formGroup]="empForm" class="justify-content-center" (ngSubmit)="onSubmitForm()">
+
+
+            <div class="form-group">
+                <label>Employee Name:</label>
+                <input type="text" class="form-control" formControlName="empname"
+                    placeholder="Please enter your Employee Name here" >
+            </div>
+            <br />
+            <br />
+
+            <div class="form-group">
+                <label>Employee Id:</label>
+                <input type="text" class="form-control" formControlName="empid"
+                    placeholder="Please enter your Employee Id here" >
+            </div>
+            <br />
+            <br />
+
+            <div class="form-group">
+                <label>Project Name:</label>
+                <input type="text" class="form-control" formControlName="project name"
+                    placeholder="Please enter your Project name here" >
+            </div>
+            <br />
+            <br />
+
+            <!-- <form [formGroup]="empForm">
+                <ngx-star-rating formControlName="rating" [id]="'rating'"></ngx-star-rating>
+                <div>Rating: {{empForm.value.rating}}</div>
+                <p>form is valid: {{ empForm.valid ? 'true' : 'false' }}</p>
+              </form> -->
+              <div class="form-group">
+                <label>Star Rating:</label>
+                <ngb-rating [max]="5" [(rate)]="starRating" [readonly]="false"></ngb-rating>
+            </div>
+            <br />
+            <br />
+
+            <div class="form-group">
+                <label>Comments :</label>
+                <textarea name="comments" id="comments" class="form-control" formControlName="comments" placeholder="Please enter your comments here">
+                </textarea>
+                </div>
+            <!-- <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" name="password" formControlName="password" required
+                    [ngClass]="{'is-invalid':isSubmitted && f.password.errors}" placeholder="Password is required">
+                <div *ngIf="isSubmitted && f.password.errors?.required" class="invalid-feedback"><span
+                        style="color: red;"> Password Is Required*</span></div>
+                <div *ngIf="isSubmitted && f.password.errors?.minlength" class="invalid-feedback"><span
+                    style="color: red;"> Password at least 8
+                    character.</span></div>
+                </div>
+                <br /> -->
+                
+                <div class="form-group mt-4" >
+                    <input class="btn btn-primary me-md-2" type="cancel" value="Cancel">
+                    <input class="btn btn-primary" type="Cancel" value="Submit">
+                </div>
+        </form>
+        </div>
+        </div>
+    </div>
+</section>
+
